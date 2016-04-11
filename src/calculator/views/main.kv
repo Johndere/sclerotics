@@ -1,0 +1,24 @@
+#:kivy 1.9.1
+
+<MainPresenter>:
+	BoxLayout:
+		orientation: 'vertical'
+		size: root.size
+
+		TextInput:
+			id: result_input
+			text: root.result
+			multiline: False
+
+		GridLayout:
+			cols: 2
+
+			Button:
+				text: '+'
+				on_press:
+					root.click_add(result_input.text)
+
+			Button:
+				text: '-'
+				on_press:
+					self.text = 'Not implemented'
